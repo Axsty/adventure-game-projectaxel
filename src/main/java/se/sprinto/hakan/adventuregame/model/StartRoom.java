@@ -17,7 +17,6 @@ public class StartRoom implements Room {
                     } else {
                         System.out.println("Du har redan hittat och plockat upp nyckeln.");
                     }
-
                     break;
                 case "2":
                     new DungeonRoom().enterRoom(player, ui);
