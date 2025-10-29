@@ -5,3 +5,4 @@ Axel;170
 Peter;170
 Felix;170
 AXEL;820
+Axel;1420
