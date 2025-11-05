@@ -6,3 +6,9 @@ Peter;170
 Felix;170
 AXEL;820
 Axel;1420
+Axel;220
+Axel;100
+Axel;0
+Axel;0
+Acke;0
+Frappe;1220
