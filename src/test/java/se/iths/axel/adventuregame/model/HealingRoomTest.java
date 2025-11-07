@@ -1,13 +1,11 @@
 package se.iths.axel.adventuregame.model;
 
-import org.junit.jupiter.api.Assertions;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.junit.jupiter.MockitoExtension;
 import se.iths.axel.adventuregame.view.FakeUI;
-
 import static org.junit.jupiter.api.Assertions.*;
+
 
 
 class HealingRoomTest {
@@ -21,16 +19,30 @@ class HealingRoomTest {
         fakeUI = new FakeUI();
         player = new Player.Builder()
                 .name("Axel")
-                .health(65)
+                .health(60)
                 .score(0)
                 .strength(10)
                 .build();
     }
 
     @Test
-    void ifPlayerSaysNo(){
+    void ifPlayerSaysYes(){
+        fakeUI.setInput("ja");
+        healingRoom.enterRoom(player, fakeUI);
+        assertEquals(100, player.getHealth());
+    }
+
+    @Test
+    void ifPlayerSaysNo() {
         fakeUI.setInput("nej");
         healingRoom.enterRoom(player, fakeUI);
-        assertEquals(65, player.getHealth());
+        assertEquals(60, player.getHealth());
+    }
+
+    @Test
+    void ifPlayerSaysUsch(){
+        fakeUI.setInput("usch");
+        healingRoom.enterRoom(player, fakeUI);
+        assertEquals(40, player.getHealth());
     }
 }

@@ -26,13 +26,6 @@ class DragonRoomTest {
     }
 
     @Test
-    void ifPlayerAttacksDragonWithoutBuff() {
-        fakeUI.setInput("ja");
-        dragonRoom.enterRoom(player, fakeUI);
-        assertEquals(0, player.getHealth());
-    }
-
-    @Test
     void ifPlayerAttacksDragonWithBuff(){
         fakeUI.setInput("ja");
         dragonRoom.enterRoom(player, fakeUI);

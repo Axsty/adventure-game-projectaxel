@@ -52,7 +52,6 @@ public class Player extends AbstractCharacter {
         return defeatedEnemy;
     }
 
-
     public void setDefeatedEnemy(boolean defeatedEnemy) {
         this.defeatedEnemy = defeatedEnemy;
     }
@@ -68,7 +67,7 @@ public class Player extends AbstractCharacter {
     public boolean hasWon() {
         return foundKey && defeatedEnemy && openedChest;
     }
-
+    
     @Override
     public void attack(AbstractCharacter target) {
         target.setHealth(target.getHealth() - this.getStrength());

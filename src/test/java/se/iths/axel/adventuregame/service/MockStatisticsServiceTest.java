@@ -23,12 +23,11 @@ public class MockStatisticsServiceTest {
     @Test
     void getSortedStatistics() {
 
-        List<Statistics> unsortedList = new ArrayList<>(List.of(
-                new Statistics("Axel", 1000),
-                new Statistics("Johan", 200),
-                new Statistics("Fredrik", 700),
-                new Statistics("Peter", 100)
-        ));
+        List<Statistics> unsortedList = new ArrayList<>();
+                unsortedList.add(0, new Statistics("Axel", 1000));
+                unsortedList.add(1, new Statistics("Johan", 200));
+                unsortedList.add(2, new Statistics("Fredrik", 700));
+                unsortedList.add(3, new Statistics("Peter", 100));
 
         Mockito.when(fileStatisticsDao.loadAll()).thenReturn(unsortedList);
         List<Statistics> sortedList = statisticsService.getSortedStatistics();
@@ -37,6 +36,5 @@ public class MockStatisticsServiceTest {
         assertEquals("Fredrik", sortedList.get(1).getPlayerName());
         assertEquals("Johan", sortedList.get(2).getPlayerName());
         assertEquals("Peter", sortedList.get(3).getPlayerName());
-
     }
 }
