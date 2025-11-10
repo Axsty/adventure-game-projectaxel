@@ -1,6 +1,6 @@
 package se.iths.axel.adventuregame.service;
 
-import dao.FakeFileStatisticsDao;
+import se.iths.axel.adventuregame.dao.FakeFileStatisticsDao;
 import org.junit.jupiter.api.Test;
 import se.iths.axel.adventuregame.model.Statistics;
 

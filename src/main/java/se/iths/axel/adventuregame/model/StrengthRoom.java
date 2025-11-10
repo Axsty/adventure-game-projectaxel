@@ -5,7 +5,7 @@ import se.iths.axel.adventuregame.view.UI;
 public class StrengthRoom implements Room{
     @Override
     public void enterRoom(Player player, UI ui) {
-        ui.showMessage("Du kryper in i en grotta. På en pedestal står det en bägare av glas fylld med en vätska.");
+        ui.showMessage("Du kryper in i en grotta. På en pedestal står det en bägare.");
         String choice = ui.getInput("Väljer du att dricka av bägaren? (ja/nej)");
 
         if (choice.equalsIgnoreCase("ja")) {

@@ -24,10 +24,10 @@ public class MockStatisticsServiceTest {
     void getSortedStatistics() {
 
         List<Statistics> unsortedList = new ArrayList<>();
-                unsortedList.add(0, new Statistics("Axel", 1000));
-                unsortedList.add(1, new Statistics("Johan", 200));
-                unsortedList.add(2, new Statistics("Fredrik", 700));
-                unsortedList.add(3, new Statistics("Peter", 100));
+        unsortedList.add(new Statistics("Axel", 1000));
+        unsortedList.add(new Statistics("Johan", 200));
+        unsortedList.add(new Statistics("Fredrik", 700));
+        unsortedList.add(new Statistics("Peter", 100));
 
         Mockito.when(fileStatisticsDao.loadAll()).thenReturn(unsortedList);
         List<Statistics> sortedList = statisticsService.getSortedStatistics();

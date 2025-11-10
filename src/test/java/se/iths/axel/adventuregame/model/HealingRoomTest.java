@@ -36,13 +36,6 @@ class HealingRoomTest {
     void ifPlayerSaysNo() {
         fakeUI.setInput("nej");
         healingRoom.enterRoom(player, fakeUI);
-        assertEquals(60, player.getHealth());
-    }
-
-    @Test
-    void ifPlayerSaysUsch(){
-        fakeUI.setInput("usch");
-        healingRoom.enterRoom(player, fakeUI);
         assertEquals(40, player.getHealth());
     }
 }

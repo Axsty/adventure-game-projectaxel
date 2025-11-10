@@ -1,8 +1,10 @@
 package se.iths.axel.adventuregame.model;
 
-import org.junit.jupiter.api.Assertions;
+
 import org.junit.jupiter.api.Test;
 import se.iths.axel.adventuregame.view.FakeUI;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class TreasureRoomTest {
 
@@ -25,8 +27,8 @@ class TreasureRoomTest {
         forestRoom.enterRoom(player, fakeUI);
         treasureRoom.enterRoom(player, fakeUI);
 
-        Assertions.assertTrue(player.hasFoundKey(), "Har hittat om ja");
-        Assertions.assertTrue(player.hasOpenedChest(), "ja om hittat nyckeln");
+        assertTrue(player.hasFoundKey(), "Har hittat om ja");
+        assertTrue(player.hasOpenedChest(), "ja om hittat nyckeln");
 
     }
 }

@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import se.iths.axel.adventuregame.view.FakeUI;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 
 class ForestRoomTest {
 
@@ -25,6 +27,6 @@ class ForestRoomTest {
 
         forestRoom.enterRoom(player, fakeUI);
 
-        Assertions.assertTrue(player.hasFoundKey(), "Ska hitta nyckel om ja");
+        assertTrue(player.hasFoundKey(), "Ska hitta nyckel om ja");
     }
 }

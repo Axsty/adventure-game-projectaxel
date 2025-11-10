@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import se.iths.axel.adventuregame.view.FakeUI;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 class DungeonRoomTest {
 
     @Test
@@ -23,7 +25,7 @@ class DungeonRoomTest {
 
         dungeonRoom.enterRoom(player, fakeUI);
 
-        Assertions.assertTrue(player.hasDefeatedEnemy(), "Ska döda om a");
+        assertTrue(player.hasDefeatedEnemy(), "Ska döda om a");
 
     }
 }
