@@ -27,6 +27,6 @@ class ForestRoomTest {
 
         forestRoom.enterRoom(player, fakeUI);
 
-        assertTrue(player.hasFoundKey(), "Ska hitta nyckel om ja");
+        assertTrue(player.hasFoundKey(), "Ska vara true om input är ja");
     }
 }

@@ -16,11 +16,10 @@ public class FakeFileStatisticsDao implements StatisticsDao {
     @Override
     public List<Statistics> loadAll() {
         List<Statistics> unsortedList = new ArrayList<>();
-                unsortedList.add(new Statistics("Axel", 1000));
-                unsortedList.add(new Statistics("Johan", 200));
-                unsortedList.add(new Statistics("Fredrik", 700));
-                unsortedList.add( new Statistics("Peter", 100));
-
-               return unsortedList;
+        unsortedList.add(new Statistics("Axel", 1000));
+        unsortedList.add(new Statistics("Johan", 200));
+        unsortedList.add(new Statistics("Fredrik", 700));
+        unsortedList.add( new Statistics("Peter", 100));
+        return unsortedList;
     }
 }

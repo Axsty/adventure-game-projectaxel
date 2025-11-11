@@ -1,4 +1,1 @@
-Axel;1220
-Axel;1220
-Axle;50
-Axel;0
+Axel;420

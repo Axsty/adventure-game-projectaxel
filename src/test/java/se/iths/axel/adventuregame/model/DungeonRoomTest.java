@@ -25,7 +25,7 @@ class DungeonRoomTest {
 
         dungeonRoom.enterRoom(player, fakeUI);
 
-        assertTrue(player.hasDefeatedEnemy(), "Ska döda om a");
+        assertTrue(player.hasDefeatedEnemy(), "Ska vara true om input är a");
 
     }
 }

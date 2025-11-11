@@ -27,8 +27,8 @@ class TreasureRoomTest {
         forestRoom.enterRoom(player, fakeUI);
         treasureRoom.enterRoom(player, fakeUI);
 
-        assertTrue(player.hasFoundKey(), "Har hittat om ja");
-        assertTrue(player.hasOpenedChest(), "ja om hittat nyckeln");
+        assertTrue(player.hasFoundKey(), "Ska vara true om input är ja");
+        assertTrue(player.hasOpenedChest(), "Ska vara true om spelaren har hittat nyckeln och input är ja");
 
     }
 }

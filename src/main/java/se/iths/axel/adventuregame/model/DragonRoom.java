@@ -21,7 +21,7 @@ public class DragonRoom implements Room{
                     ui.showMessage("Ditt liv: " + player.getHealth());
                 }else {
                     ui.showMessage("Draken är död!!");
-                    player.addScore(1000);
+                    player.addScore(200);
                 }
             } else if (choice.equalsIgnoreCase("nej")) {
                 ui.showMessage("Du vänder dig om och klättrar ner igen.");
